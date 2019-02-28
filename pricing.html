@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accuracy Pricing</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="img/icon.png">
+
+    <link rel="stylesheet" href="css/linearicons.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobilecss.css">
+    <link rel="stylesheet" href="css/slide-animation.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></head>
+</head>
+<body>
+<!--
+Cool stuff that we could add
+
+animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
+
+-->
+
+<header class="header-area">
+    <div class="container">
+        <div class="header-wrap">
+
+            <div class="header-top d-flex justify-content-between align-items-center navbar-expand-md">
+
+
+                <!-- LEFT NAV - This nav bar is to the left of the logo -->
+                <div class="col menu-left">
+                    <a href="about.html">About</a>
+                    <a href="schedule.html">Schedule</a>
+                </div>
+
+                <!-- Logo of the navbar -->
+                <div class="col-3 logo">
+                    <a href="home.html">
+                        <img id="logoNav" class="mx-auto" src="img/logo.jpg" alt="" style="padding: 10px; border-radius: 50%; background-color: white;">
+                    </a>
+                </div>
+
+                <!-- RIGHT NAV - This nav bar is to the right of the logo -->
+                <nav class="col navbar navbar-expand-md justify-content-end">
+
+                    <!-- Toggler/collapsibe Button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="lnr lnr-menu" style="color:white;"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse menu-right" id="collapsibleNavbar">
+                        <ul class="navbar-nav justify-content-center w-100">
+                            <li class="nav-item hide-lg">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item hide-lg">
+                                <a class="nav-link" href="schedule.html">Schedule</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="portal.html">Dashboard</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<section style="background-color: white; padding: 5vw;">
+    <div class="container" style="text-align: center;">
+        <h1 class="aboutTitle">Pricing Plans</h1>
+
+        <div style="height: 50px;">
+            <div style="display:inline-block; height:100%; padding: 0 15px;" class="pToggle">
+                <h3 style="line-height:50px; font-weight:600;" id="monthly">Monthly</h3>
+            </div>
+            <div style="display:inline-block; height:100%;" >
+                <label class="switch">
+                    <input type="checkbox"  onclick="toggleMY()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div style="display:inline-block; height:100%;  padding: 0 15px;" class="pToggle">
+                <h3 style="line-height:50px; font-weight:100;" id="yearly">Yearly <font style="font-size: 0.6em;">(discounted)</font></h3>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 100%; padding: 55px 2vw; display: table;">
+        <div class="col-md-3" style="float: left;">
+            <div id="divP1" style="width:100%; text-align:center;" class="price">
+              <h1 class="pricingHeaders">Free</h1>
+                <div class="priceMoney">
+                    $<b class="priceNumber">0</b>
+                    <br><br>
+
+                </div>
+                <button class="buyButton" onclick="toggleActiveClass(1)">Get It</button>
+
+              <div style=" text-align: left; padding:10%;">
+                  <p><i>Essential features including:</i></p><hr>
+                  <p>General Ledger</p><hr>
+                  <p>Major financial statements created <strong style="color:black;">annually</strong></p><hr>
+                  <p>Access to Portal</p><hr>
+                  <p>View Baseline Financial Reports</p>
+                  <hr>
+                  <p>Statement of Financial Position</p>
+                  <hr>
+                  <p>Income Statement</p>
+                  <hr>
+                  <p>Cash Flow Statement</p>
+                  <hr>
+                  <p>Statement of Changes in Equity</p><hr>
+              </div>
+
+            </div>
+        </div>
+        <div class="col-md-3" style="float: left;">
+            <div id="divP2" style="width:100%;text-align:center;" class="price">
+                <h1 class="pricingHeaders">Basic</h1>
+                <div class="priceMoney" id="pBasic">
+                    $<b class="priceNumber">50</b>
+                    <br>monthly
+                </div>
+                <button class="buyButton" onclick="toggleActiveClass(2)">Buy It</button>
+
+                <div style="text-align: left; padding:10%;">
+                    <p><i>Everything in <b style="color:black">Free</b> including:</i></p><hr>
+                    <p>Major financial statements created <strong style="color:black">quarterly</strong></p><hr>
+                    <p>Ability to handle payroll for up to 50 employees</p><hr>
+                    <p>100 transactions/quarter in General Ledger</p><hr>
+                    <p>Annual audit performed by CPAs</p><hr>
+                    <p>Notifications</p>
+                    <hr>
+                    <p>Integration into Google Calendar</p><hr>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3" style="float: left;">
+            <div id="divP3" style="width:100%; text-align:center;" class="price activePricing">
+                <h1 class="pricingHeaders">Premium</h1>
+                <div class="priceMoney" id="pPremium">
+                    $<b class="priceNumber">200</b>
+                    <br>monthly
+                </div>
+                <button class="buyButton" onclick="toggleActiveClass(3)">Buy It</button>
+
+                <div style="text-align: left; padding:10%;">
+                    <p><i>Everything in <b style="color:black">Basic</b> including:</i></p><hr>
+                    <p>Major financial statements created <strong style="color:black">monthly</strong></p><hr>
+                    <p>Ability to handle payroll for up to 500 employees</p>
+                    <hr>
+                    <p>1000 transactions/quarter in General Ledger</p>
+                    <hr>
+                    <p>Quarterly audit performed by CPAs</p>
+                    <hr>
+                    <p>24/7 access to support team via email or phone
+                    </p>
+                    <hr>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3" style="float: left;">
+            <div id="divP4" style="width:100%; text-align:center;" class="price">
+                <h1 class="pricingHeaders">Enterprise</h1>
+                <div class="priceMoney" id="pEnterprise">
+                    $<b class="priceNumber">500</b>
+                    <br>monthly
+                </div>
+                <button class="buyButton" onclick="toggleActiveClass(4)">Buy It</button>
+
+                <div style="text-align: left; padding:10%;">
+                    <p><i>Everything in <b style="color:black">Premium</b> including:</i></p><hr>
+                    <p>Ability to handle payroll for unlimited number of employees</p><hr>
+                    <p>Unlimited transactions/quarter in General Ledger</p><hr>
+                    <p>Monthly audit performed by CPAs</p><hr>
+                    <p>1 dedicated CPA and 1 dedicated attorney available 24/7</p><hr>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section style="background-color: white; padding-bottom: 40px;">
+    <div class="container" style="text-align: center; padding: 0 20px;">
+        <h1 class="aboutTitle2">Services We Offer</h1>
+        <div class="row">
+            <div class="col-md-6" style="text-align: left;">
+                <h3>Businesses</h3>
+                <p style="padding-left: 10px;">
+                    Our team of legal and financial professionals are prepared
+                    to meet all of our client’s needs, regardless of size or
+                    resources involved. With a team of over 100 CPAs at each
+                    of our locations, we offer our clients comprehensive services
+                    to handle all aspects of financial growth of your business, including:
+                </p>
+                <div class="row" style="padding-left: 10px;" id="businessesServices">
+                    <div class="col-md-6 col-6">
+                        <ul style="list-style-type: disc !important;">
+                            <li>Tax Management</li>
+                            <li>Online Bookkeeping</li>
+                            <li>Incorporation and Restructuring Filing</li>
+                            <li>IRS Legal Counseling</li>
+                            <li>Online Payroll Database</li>
+                            <li>Company Auditing</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-6">
+                        <ul style="list-style-type: disc !important;">
+                            <li>Quarterly Financial Statement Records</li>
+                            <li>Revenue and Expense Analysis</li>
+                            <li>Asset Liquidation Strategies</li>
+                            <li>Financial Predictions</li>
+                            <li>QuickBooks Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="text-align: left; padding-left: 15%;" id="indvServices">
+                <h3>Individuals</h3><br>
+                <div class="row" style="padding-left: 10px;">
+                    <div>
+                        <ul style="list-style-type: disc !important;">
+                            <li>Retirement Planning</li>
+                            <li>Mortgage Refinancing</li>
+                            <li>Trust/Estate Structuring</li>
+                            <li>Personal Tax Management and Tax Return Filing</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bottomPage" style="height:500px;">
+    <div class="align-content-center" style="width:100%; height:100%; padding: 40px 35px 50px 35px; margin-top: 80px;
+		background: linear-gradient(#db2c49, #8b0202)">
+        <div style="width: 200px; margin: 80px auto 40px auto;">
+            <a href="https://www.instagram.com/accuracyfbla/" target="_blank">
+                <i class="fab fa-instagram iconBottom"></i>
+            </a>
+            <a href="https://twitter.com/Accurac48406895" target="_blank">
+                <i class="fab fa-twitter iconBottom"></i>
+            </a>
+            <a href="https://www.facebook.com/Accuracy-FBLA-2743821792302296/" target="_blank">
+                <i class="fab fa-facebook-square iconBottom"></i>
+            </a>
+        </div>
+        <div class="container bottomExtra">
+            <div class="row">
+                <div class="col-6 col-md-6 ">
+                    <span style="font-size: 20px;"><strong>Site Map</strong></span><br>
+                    <span>
+							<a href="home.html">Home</a>&emsp;
+							<a href="about.html">About</a>
+						</span>
+                    <br>
+                    <span>
+							<a href="schedule.html">Schedule</a>&emsp;
+							<a href="faq.html">FAQ</a>
+						</span><br>
+                    <span>
+							<a href="pricing.html">Pricing</a>&emsp;
+							<a href="portal.html">Dashboard</a>
+						</span>
+                </div>
+                <div class="col-6 col-md-6">
+                    <span style="font-size: 20px; line-height:0.9"><strong>Alternate Accounting Sites</strong></span><br>
+                    <span>
+							<a href="https://www.mozzetti.com/" target="_blank">Mozzetti, Inc.</a>
+						</span><br>
+                    <span>
+							<a href="http://bhuiyancpa.com/" target="_blank">Bhuiyan</a>
+						</span><br>
+                    <span>
+							<a href="http://www.bandraccounting.com/" target="_blank">B&R Accounting</a>
+						</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottomText">
+            Copyright © 2019 Accuracy Accounting - All Rights Reserved -
+            <a href="portal.html" style="color:white; text-decoration: underline white;" class="ppolicy">Privacy Policy</a>
+            <br><i>*All images require no copyright nor attribution</i>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src="js/pricing-toggle.js"></script>
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
+<script src="js/slide-animation.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accuracy</title>
+    <link rel="stylesheet" href="css/mobilecss.css">
+    
+    <style>
+        @media only screen and (max-width:420px) {
+            #bar {
+                font-size: 50px !important;
+            }
+        }
+    </style>
+</head>
+<body style="width:99vw; height:90vh;" onload="load()">
+    <embed id="md-Anim" style="margin: 0 auto; width:99%; height:90%; display:none;" src="img/Accuracy_Swf_fade.swf">
+    <img src="img/accuracy-animation.gif" style="margin: 0 auto; padding:15vh 0; width: 99%; display: none;" id="xs-Anim">
+    <div id="progress" style="margin:0 auto; width: 80%; background-color: #ddd;">
+        <div id="bar" style="width: 1%; height: 5vh; text-align: left; padding-left:10px; color:white; line-height:5vh; background-color: #d01d33; font-size: 2rem;">
+            10%
+        </div>
+    </div>
+    <script src="js/load-screen.js"></script>
+</body>
+</html>

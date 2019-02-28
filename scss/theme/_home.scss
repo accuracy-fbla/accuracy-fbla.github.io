@@ -1,0 +1,443 @@
+/* Start Home Banner Area 
+============================================================================================ */
+.home-banner-area {
+    background: url(../img/header-bg.png) no-repeat center;
+    .height {
+        height: 750px;
+    }
+    .height {
+        @include media-breakpoint-down (md) {
+            height: 500px !important;
+        }
+    }
+}
+
+.home-banner-content {
+    text-align: center;
+    color: #fff;
+    h1 {
+        color: $white;
+        font-size: 72px;
+        text-transform: uppercase;
+        letter-spacing: 10.8px;
+        br {
+            @include media-breakpoint-down (md) {
+                display: none;
+            }
+        }
+        @include media-breakpoint-down (lg) {
+            font-size: 40px;
+        }
+        @media ( max-width:414px) {
+            font-size: 40px;
+        }
+    }
+    hr {
+        border-color: rgba(255, 255, 255, 0.40);
+    }
+    p {
+        font-size: 18px;
+        text-transform: uppercase;
+        padding-top: 8px;
+    }
+}
+
+/* End Home Banner Area 
+============================================================================================ */
+
+/* Start Banner Area 
+============================================================================================ */
+.banner-area {
+    background: url(../img/banner-bg.png) no-repeat center;
+    .height {
+        height: 400px;
+    }
+}
+
+.banner-content {
+    text-align: center;
+    color: #fff;
+    h1 {
+        color: $white;
+        font-size: 48px;
+        text-transform: uppercase;
+        letter-spacing: 8.8px;
+        @media ( max-width:1024px) {
+            letter-spacing: 5px;
+        }
+        @media ( max-width:414px) {
+            font-size: 30px;
+        }
+    }
+    hr {
+        border-color: rgba(255, 255, 255, 0.40);
+        max-width: 400px;
+    }
+    .breadcrmb {
+        a {
+            color: #ffffff;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        span {
+            color: #ffffff;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+    }
+    p {
+        font-size: 18px;
+        text-transform: uppercase;
+        padding-top: 8px;
+    }
+}
+
+/* End Banner Area 
+============================================================================================ */
+
+/* Start About Area css
+============================================================================================ */
+.about-area {
+    .section-title {
+        @media (max-width: 991px) {
+            padding-top: 60px;
+        }
+    }
+}
+/* End About Area css
+============================================================================================ */
+
+/* Menu List Area css
+============================================================================================ */
+
+.menu-area {
+    .section-title {
+        padding-right: 55px;
+        @media (max-width: 991px) {
+            padding-right: 0;
+        }
+        @media (max-width: 767px) {
+            margin-top: 60px;
+        }
+    }
+}
+
+.menu-list {
+    padding: 120px 0px;
+    text-align: center;
+    background: #faf5f0;
+    @media (max-width: 991px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 767px) {
+        margin-top: 30px;
+    }
+}
+
+.single-menu {
+    margin-bottom: 80px;
+    @media (max-width: 991px) {
+        margin-bottom: 50px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    h3 {
+        font-size: 21px;
+        position: relative;
+        padding-bottom: 20px;
+        font-style: italic;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        @media (max-width: 991px) {
+            margin-bottom: 10px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 35px;
+            @include transform(translate(-50%, -50%));
+            height: 1px;
+            width: 120px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+    .list {
+        li {
+            padding-bottom: 35px;
+            @media (max-width: 991px) {
+                padding-bottom: 25px;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+            .menu-item {
+                margin-bottom: 10px;
+                font-weight: 500;
+                color: #010000;
+                @media (max-width: 420px) {
+                    font-size: 16px;
+                }
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+/* End Menu List Area css
+============================================================================================ */
+
+/* Start Gallery Area css
+============================================================================================ */
+
+.gallery-area {
+    padding: 240px 0 90px;
+    @media (max-width: 991px) {
+        padding: 80px 0 50px;
+    }
+}
+
+.single-gallery {
+    position: relative;
+    margin-bottom: 30px;
+    figure {
+        overflow: hidden;
+        img {
+            @include transition();
+        }
+    }
+    .overlay {
+        z-index: 2;
+        @include transition();
+    }
+    .icon {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        z-index: 2;
+        @include transition();
+        opacity: 0;
+        a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            color: #ffffff;
+            font-size: 36px;
+            span {
+                display: inline-block;
+                @include transition();
+            }
+        }
+    }
+    &:hover {
+        figure {
+            img {
+                @include transform(scale(1.2));
+            }
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .icon {
+            top: 50%;
+            opacity: 1;
+            a {
+                span {
+                    @include transform(rotate(45deg));
+                }
+            }
+        }
+    }
+}
+
+/* End Gallery Area css
+============================================================================================ */
+
+/* Start Reservation Area css
+============================================================================================ */
+
+.reservation-area {
+    .section-title {
+        padding-right: 55px;
+        @media (max-width: 991px) {
+            padding-right: 60px;
+        }
+        @media (max-width: 767px) {
+            margin-top: 60px;
+        }
+    }
+}
+
+.booking-form {
+    padding: 120px 50px 240px;
+    background: #faf5f0;
+    @media (max-width: 991px) {
+        padding: 30px 20px;
+    }
+    .form-control {
+        border-radius: 0;
+        background-color: #ffffff;
+        border: 0;
+        color: $text-color;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    input,
+    textarea {
+        font-size: 14px;
+        font-weight: 200;
+    }
+    .option {
+        color: #222;
+    }
+    .btn-outline-secondary {
+        background: #ffffff;
+        &:active,
+        &:focus {
+            background-color: #ffffff !important;
+        }
+    }
+    .nice-select span {
+        color: #848c94;
+        font-size: 14px;
+        font-weight: 200;
+    }
+    textarea {
+        height: 150px;
+    }
+    .list {
+        width: 100%;
+    }
+}
+
+/* End Reservation Area css
+============================================================================================ */
+
+/* End Chefs Quotes Area css
+============================================================================================ */
+
+.chefs-quotes-area {
+    .section-title {
+        margin-top: 50px;
+    }
+    .chef-img {
+        // @media (max-width: 991px) {
+        //     display: none;
+        // }
+    }
+}
+
+/* End Chefs Quotes Area css
+============================================================================================ */
+
+/* Start Callto Action Area css
+============================================================================================ */
+
+.callto-action-area {
+    position: relative;
+    .owl-nav {
+        img {
+            @include filter(opacity(20%));
+            @include transition();
+            &:hover {
+                @include filter(opacity(100%));
+            }
+        }
+    }
+    h3 {
+        font-size: 21px;
+        text-transform: uppercase;
+        font-style: italic;
+        position: relative;
+        margin-bottom: 40px;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            background: rgba(0, 0, 0, 0.2);
+            width: 120px;
+            height: 1px;
+        }
+    }
+    p {
+        font-weight: 500;
+        margin: 0;
+    }
+    .text-box {
+        width: 45%;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 33px 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        @media (max-width: 575px) {
+            width: 80%;
+        }
+    }
+    .owl-nav {
+        width: 115%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        left: -8%;
+        @media (max-width: 1096px) {
+            display: none;
+        }
+    }
+}
+
+/* End Callto Action Area css
+============================================================================================ */
+
+/* Start Contact Area css
+============================================================================================ */
+
+.contact-area {
+    .section-title {
+        p {
+            margin-bottom: 5px;
+        }
+        @media (max-width: 767px) {
+            margin-top: 60px;
+        }
+    }
+}
+
+.contact-form {
+    margin-top: 40px;
+    input, textarea {
+        @include placeholder {
+            font-size: 13px;
+            color: #999999;
+        }
+        &:focus {
+            border-color: #ced4da;
+        }
+    }
+    textarea {
+        height: 136px;
+        resize: none;
+    }
+}
+
+#contactMap {
+    height: 650px;
+    width: 100%;
+    @media (max-width: 767px) {
+        height: 550px;
+    }
+}
+
+/* End Contact Area css
+============================================================================================ */

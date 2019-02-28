@@ -1,0 +1,141 @@
+/* =================================== */
+
+/*  Footer Styles
+/* =================================== */
+
+/*-------- start footer Area -------------*/
+
+.footer-area {
+    background-color: #04091e;
+}
+
+.single-footer-widget {
+    h4 {
+        color: $white;
+        font-size: 18px;
+        margin-bottom: 25px;
+        font-weight: 500;
+        text-transform: uppercase;
+        @media (max-width: 575px) {
+            margin-bottom: 15px;
+        }
+    }
+    .form-control {
+        border: solid 1px rgba(255, 255, 255, 0.1);
+        width: 80% !important;
+        font-weight: 300;
+        background: transparent;
+        padding-left: 20px;
+        border-radius: 0;
+        font-size: 14px;
+        line-height: normal !important;
+        color: #ffffff;
+        height: 40px;
+        padding: 0 20px;
+        &:focus {
+            box-shadow: none;
+            color: #ffffff;
+        }
+    }
+    ul li {
+        margin-bottom: 10px;
+        a {
+            color: $text-color;
+            @include transition();
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    .info {
+        margin-top: 25px;
+        color: #fff;
+        font-size: 12px;
+        &.valid {
+            color: green;
+        }
+        &.error {
+            color: red;
+        }
+    }
+    .btn {
+        font-size: 1.2rem;
+        border-radius: 0;
+        background: $primary-color;
+        color: $white;
+        padding: 5px 10px;
+        .lnr {
+            line-height: inherit;
+            font-size: 13px;
+            padding: 0px 4px;
+        }
+    }
+    ::-moz-selection {
+        /* Code for Firefox */
+        background-color: #191919 !important;
+        color: $text-color;
+    }
+    ::selection {
+        background-color: #191919 !important;
+        color: $text-color;
+    }
+    input {
+        @include placeholder {
+            color: #555555;
+            font-size: 13px;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        margin-bottom: 30px;
+    }
+    .input-group {
+        @media(max-width: 575px) {
+            width: 85%;
+        }
+    }
+}
+
+.footer-bottom {
+    padding-top: 50px;
+    @media(max-width: 575px) {
+        padding-top: 20px;
+    }
+    .footer-social {
+        text-align: right;
+        @media(max-width: 991px) {
+            text-align:left;
+            margin-top: 30px;
+        }
+    }
+    .lnr,
+    a {
+        color: $primary-color;
+    }
+    .footer-social {
+        a {
+            background: rgba(255, 255, 255, 0.1);
+            width: 30px;
+            height: 30px;
+            line-height: 22px;
+            display: inline-block;
+            text-align: center;
+            @include transition();
+            i {
+                vertical-align: bottom;
+                @include transition();
+            }
+            &:hover {
+                background-color: $primary-color;
+                i {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+.footer-text {
+
+}
+
+/*-------- end footer Area -------------*/

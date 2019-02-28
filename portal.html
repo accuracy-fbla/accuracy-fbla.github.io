@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accuracy Dashboard</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="img/icon.png">
+
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobilecss.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/slide-animation.css">
+    <link rel="stylesheet" href="css/buttonAnim.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></head>
+
+<body style="">
+<!--
+Cool stuff that we could add
+
+animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
+
+-->
+<header class="header-area">
+    <div class="container">
+        <div class="header-wrap">
+
+            <div class="header-top d-flex justify-content-between align-items-center navbar-expand-md">
+
+
+                <!-- LEFT NAV - This nav bar is to the left of the logo -->
+                <div class="col menu-left">
+                    <a href="about.html">About</a>
+                    <a href="schedule.html">Schedule</a>
+                </div>
+
+                <!-- Logo of the navbar -->
+                <div class="col-3 logo">
+                    <a href="home.html">
+                        <img id="logoNav" class="mx-auto" src="img/logo.jpg" alt="" style="padding: 10px; border-radius: 50%; background-color: white;">
+                    </a>
+                </div>
+
+                <!-- RIGHT NAV - This nav bar is to the right of the logo -->
+                <nav class="col navbar navbar-expand-md justify-content-end">
+
+                    <!-- Toggler/collapsibe Button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="lnr lnr-menu" style="color:white;"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse menu-right" id="collapsibleNavbar">
+                        <ul class="navbar-nav justify-content-center w-100">
+                            <li class="nav-item hide-lg">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item hide-lg">
+                                <a class="nav-link" href="schedule.html">Schedule</a>
+                            </li>
+                            <!-- Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    Services
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="pricing.html">Pricing</a>
+                                    <a class="dropdown-item" href="faq.html">FAQs</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section style="background-color:white; padding: 5vw;">
+    <div class="container" style="text-align: center; padding-bottom:100px;">
+        <h1 class="aboutTitle3">Dashboard</h1>
+        <button class="btn-11" id="portalB" onclick="window.open('Login-Signup/index.html')">Visit Dashboard</button>
+
+    </div>
+    <div class="container" style="text-align: center;">
+        <h1 class="aboutTitle1">Privacy Policy</h1>
+        <div style="text-align:left;" id="pPolicy">
+            <p>Accuracy ("us", "we", or "our") operates the accurate-website.github.io website (the "Service").
+                <br><br>
+                This page informs you of our policies regarding the collection, use, and disclosure
+                of personal data when you use our Service and the choices you have associated
+                with that data. Our Privacy Policy for Accuracy is created with the help of the
+                <a href="https://www.freeprivacypolicy.com/" target="_blank">Free Privacy Policy website</a>.
+                <br><br>We use your data to provide and improve the Service.
+                By using the Service, you agree to the collection and use of information in accordance
+                with this policy. Unless otherwise defined in this Privacy Policy,
+                terms used in this Privacy Policy have the same meanings as in our Terms and Conditions,
+                accessible from accurate-website.github.io
+            </p><br>
+            <h1>
+                Information Collection And Use
+            </h1>
+            <p>
+                We collect several different types of information for various purposes to provide and improve our Service to you.
+            </p>
+            <h3>
+                Types of Data Collected
+            </h3><br>
+            <h5>Personal Data
+            </h5>
+            <p>While using our Service, we may ask you to provide us with
+                certain personally identifiable information that can be used to
+                contact or identify you ("Personal Data"). Personally identifiable
+                information may include, but is not limited to:
+            </p>
+            <ul style="list-style-type: disc !important; padding-left:10px;">
+                <li>
+                    Email address
+                </li>
+                <li>
+                    First name and last name
+                </li>
+                <li>
+                    Cookies and Usage Data
+                </li>
+            </ul>
+            <br><h5>
+                Usage Data
+            </h5>
+            <p>
+                We may also collect information how the Service
+                is accessed and used ("Usage Data"). This Usage Data may include
+                information such as your computer's Internet Protocol address (e.g.
+                IP address), browser type, browser version, the pages of our Service
+                that you visit, the time and date of your visit, the time spent on
+                those pages, unique device identifiers and other diagnostic data.
+            </p>
+            <h5>
+                Tracking & Cookies Data
+            </h5>
+            <p>
+                We use cookies and similar tracking technologies to track the activity
+                on our Service and hold certain information.
+                <br>Cookies are files with small amount of data which may include an
+                anonymous unique identifier. Cookies are sent to your browser from a
+                website and stored on your device. Tracking technologies also used are
+                beacons, tags, and scripts to collect and track information and to
+                improve and analyze our Service.
+                <br><br>Examples of Cookies we use:
+            </p>
+            <ul style="list-style-type: disc !important; padding-left:10px;">
+                <li><strong>Session Cookies</strong>. We use Session Cookies to operate our Service.
+                </li>
+            </ul><br>
+            <h1>
+                Use of Data
+            </h1><br>
+            <p>
+                Accuracy uses the collected data for various purposes:
+            </p>
+            <ul style="list-style-type: disc !important; padding-left:10px;">
+                <li>
+                    To provide and maintain the Service
+                </li>
+                <li>
+                    To notify you about changes to our Service
+                </li>
+                <li>
+                    To allow you to participate in interactive features of our Service when you choose to do so
+                </li>
+                <li>
+                    To provide customer care and support
+                </li>
+                <li>
+                    To provide analysis or valuable information so that we can improve the Service
+                </li>
+                <li>
+                    To monitor the usage of the Service
+                </li>
+                <li>
+                    To detect, prevent and address technical issues
+                </li>
+            </ul>
+            <br>
+            <h1>
+                Transfer Of Data
+            </h1><br>
+            <p>
+                Your information, including Personal Data, may be transferred to
+                — and maintained on — computers located outside of your state,
+                province, country or other governmental jurisdiction where the data
+                protection laws may differ than those from your jurisdiction.
+                <br><br>
+                If you are located outside United States
+                and choose to provide information to us, please note
+                that we transfer the data, including Personal Data, to
+                United States and process it there.
+                <br><br>
+                Your consent to this Privacy Policy followed by your submission of such
+                information represents your agreement to that transfer.
+                <br><br>
+                Accuracy will take all steps reasonably necessary to ensure that your
+                data is treated securely and in accordance with this Privacy Policy and
+                no transfer of your Personal Data will take place to an organization or a
+                country unless there are adequate controls in place including the security
+                of your data and other personal information.
+            </p>
+            <br>
+            <h1>
+                Disclosure Of Data
+            </h1><br>
+            <h3>
+                Legal Requirements
+            </h3><br>
+            <p>
+                Accuracy may disclose your Personal Data in the good faith belief that such action is necessary to:
+            </p>
+            <ul style="list-style-type: disc !important; padding-left: 10px;">
+                <li>
+                    To comply with a legal obligation
+                </li>
+                <li>
+                    To protect and defend the rights or property of Accuracy
+                </li>
+                <li>
+                    To prevent or investigate possible wrongdoing in connection with the Service
+                </li>
+                <li>
+                    To protect the personal safety of users of the Service or the public
+                </li>
+                <li>
+                    To protect against legal liability
+                </li>
+            </ul>
+            <br>
+            <h1>
+                Security Of Data
+            </h1>
+            <br>
+            <p>
+                The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable
+                means to protect your Personal Data, we cannot guarantee its absolute security.
+            </p>
+            <h1>
+                Service Providers
+            </h1><br>
+            <p>
+                We may employ third party companies and individuals to facilitate our
+                Service ("Service Providers"), to provide the Service on our behalf,
+                to perform Service-related services or to assist us in analyzing how
+                our Service is used.
+                <br><br>
+                These third parties have access to your Personal Data
+                only to perform these tasks on our behalf and are obligated not
+                to disclose or use it for any other purpose.
+            </p>
+            <h1>
+                Links To Other Sites
+            </h1><br>
+            <p>
+                Our Service may contain links
+                to other sites that are not operated by us.
+                If you click on a third party link, you will be directed to
+                that third party's site. We strongly advise you to review the
+                Privacy Policy of every site you visit.
+                <br><br>
+                We have no control over and assume no responsibility
+                for the content, privacy policies or practices of any third party sites or services.
+            </p>
+            <h1>
+                Children's Privacy
+            </h1><br>
+            <p>
+                Our Service does not address anyone under the age of 18 ("Children").<br><br>
+                We do not knowingly collect personally identifiable
+                information from anyone under the age of 18. If you are a
+                parent or guardian and you are aware that your Children has
+                provided us with Personal Data, please contact us.
+                If we become aware that we have collected Personal
+                Data from children without verification of parental
+                consent, we take steps to remove that information from our servers.
+            </p>
+            <h1>
+                Changes To This Privacy Policy
+            </h1><br>
+            <p>
+                We may update our Privacy Policy from time to time.
+                We will notify you of any changes by posting the new Privacy Policy on this page.
+                <br><br>
+                We will let you know via email and/or a prominent notice on our Service, prior to
+                the change becoming effective and update the "effective date" at the top of this Privacy Policy.
+                <br><br>
+                You are advised to review this Privacy Policy periodically for any changes.
+                Changes to this Privacy Policy are effective when they are posted on this page.
+            </p>
+            <h1>
+                Contact Us
+            </h1><br>
+            <p>
+                If you have any questions about this Privacy Policy,
+                please contact us by email: contact.accuracy19@gmail.com
+            </p>
+        </div>
+    </div>
+</section>
+
+<div class="bottomPage" style="height:500px;">
+    <div class="align-content-center" style="width:100%; height:100%; padding: 40px 35px 50px 35px; margin-top: 80px;
+		background: linear-gradient(#db2c49, #8b0202)">
+        <div style="width: 200px; margin: 80px auto 40px auto;">
+            <a href="https://www.instagram.com/accuracyfbla/" target="_blank">
+                <i class="fab fa-instagram iconBottom"></i>
+            </a>
+            <a href="https://twitter.com/Accurac48406895" target="_blank">
+                <i class="fab fa-twitter iconBottom"></i>
+            </a>
+            <a href="https://www.facebook.com/Accuracy-FBLA-2743821792302296/" target="_blank">
+                <i class="fab fa-facebook-square iconBottom"></i>
+            </a>
+        </div>
+        <div class="container bottomExtra">
+            <div class="row">
+                <div class="col-6 col-md-6 ">
+                    <span style="font-size: 20px;"><strong>Site Map</strong></span><br>
+                    <span>
+							<a href="home.html">Home</a>&emsp;
+							<a href="about.html">About</a>
+						</span>
+                    <br>
+                    <span>
+							<a href="schedule.html">Schedule</a>&emsp;
+							<a href="faq.html">FAQ</a>
+						</span><br>
+                    <span>
+							<a href="pricing.html">Pricing</a>&emsp;
+							<a href="portal.html">Dashboard</a>
+						</span>
+                </div>
+                <div class="col-6 col-md-6">
+                    <span style="font-size: 20px; line-height:0.9"><strong>Alternate Accounting Sites</strong></span><br>
+                    <span>
+							<a href="https://www.mozzetti.com/" target="_blank">Mozzetti, Inc.</a>
+						</span><br>
+                    <span>
+							<a href="http://bhuiyancpa.com/" target="_blank">Bhuiyan</a>
+						</span><br>
+                    <span>
+							<a href="http://www.bandraccounting.com/" target="_blank">B&R Accounting</a>
+						</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottomText">
+            Copyright © 2019 Accuracy Accounting - All Rights Reserved -
+            <a href="portal.html" style="color:white; text-decoration: underline white;" class="ppolicy">Privacy Policy</a>
+            <br><i>*All images require no copyright nor attribution</i>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
+<script src="js/slide-animation.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

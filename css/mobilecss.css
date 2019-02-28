@@ -1,0 +1,202 @@
+@media only screen and (max-width:420px) {
+
+    .map {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    #monthly, #yearly {
+        font-size: 15px;
+    }
+
+    .pToggle {
+        padding: 0 5px !important;
+    }
+
+    #indvServices {
+        padding-left:30px !important;
+    }
+
+    #businessesServices {
+        font-size: 12px;
+    }
+
+    #home-email {
+        height: 500px !important;
+    }
+
+    .bottomExtra .col-6  {
+        font-size: 10px !important;
+    }
+
+    .bottomExtra .col-6 strong {
+        font-size: 13px !important;
+    }
+
+    .bottomText {
+        font-size: 12px !important;
+    }
+
+
+
+    #pPolicy h1 {
+        font-size: 30px;
+    }
+
+    #portalB {
+        width: 215px !important;
+        font-size: 13px !important;
+        height:55px !important;
+    }
+
+    #quoteCatch {
+        font-size: 1.2rem !important;
+    }
+
+    .catchSection {
+        padding: 0.5rem 10vw !important;
+    }
+
+    .catchImage {
+        height: 250px !important;
+        width: 250px!important;
+    }
+
+    .scheduleTitle {
+	font-size: 3em !important;
+	padding-top: 10vh !important;
+    }
+
+    #bar {
+        font-size: 80px !important;
+    }
+
+    .pricingHeaders {
+        font-size: 50px !important;
+    }
+
+    .price {
+        margin: 20px 0;
+    }
+
+    .priceNumber {
+        font-size: 50px !important;
+    }
+
+    #questionsFAQ {
+        font-size: 10vw !important;
+    }
+
+    #faqTitle {
+        padding-top: 15vh !important;
+        font-size: 6vw !important;
+    }
+
+    .aboutTitle3 {
+        font-size: 3em !important;
+        padding-top: 14vh !important;
+    }
+    .aboutTitle {
+        font-size: 3em !important;
+        padding-top: 15vh !important;
+    }
+
+    .aboutTitle1 {
+        font-size: 15vw !important;
+    }
+
+    .aboutTitle2 {
+        font-size: 10vw !important;
+    }
+
+    .aboutInfo {
+        font-size: 0.8em !important;
+        padding-left: 10px;
+    }
+
+    .testimonyD {
+        height: 610px !important;
+    }
+
+    .testimonyP {
+        font-size: 0.9em !important;
+    }
+
+    .staffName {
+        font-size: 17px;
+    }
+
+    .staffPosition {
+        font-size: 11px !important;
+    }
+
+
+
+
+
+    #contactUS1 {
+        float: none !important;
+        width: 100% !important;
+        font-size: 13px !important;
+        padding: 5px !important;
+    }
+
+    #contactUSForm {
+        float: none !important;
+        width: 100% !important;
+        padding: 2px 8vw !important;
+    }
+
+    #buttonForm {
+        margin: 0 auto !important;
+        font-size: 20px !important;
+        width: 40% !important;
+        height: 40px !important;
+    }
+
+    label {
+        font-size: 13px !important;
+    }
+    input::placeholder, textarea::placeholder {
+        font-size: 13px !important;
+    }
+
+    input {
+        height: 25px !important;
+        font-size: 13px !important;
+    }
+
+    textarea {
+        font-size: 13px !important;
+    }
+
+    .menu-right li a {
+        font-size: 13px !important;
+    }
+    .dropdown-menu {
+        background-color: inherit !important;
+    }
+
+    #logoNav {
+        padding: 5px !important;
+    }
+
+    #accuracyText {
+        height: 30vh !important;
+    }
+
+    .cpT {
+        width: 70% !important;
+        padding: 0 9px !important;
+        font-size: 4vw !important;
+        text-align: left !important;
+    }
+
+    .cpImg {
+        width: 30% !important;
+    }
+
+    #cp2P {
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Accuracy Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="shortcut icon" type="image/png" href="../img/icon.png">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/animatecss.css">
+
+<!--===============================================================================================-->
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+
+	<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAzfPhj4cAMMPEimZDlGlvK5vgdB52l1co",
+    authDomain: "accuracy-dashboard.firebaseapp.com",
+    databaseURL: "https://accuracy-dashboard.firebaseio.com",
+    projectId: "accuracy-dashboard",
+    storageBucket: "accuracy-dashboard.appspot.com",
+    messagingSenderId: "1053745462291"
+  };
+  firebase.initializeApp(config);
+
+  firebase.auth().signOut().then(function() {
+      console.log("signed out");
+  }).catch(function(error) {
+      // An error happened.
+  });
+</script>
+
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: linear-gradient(#d30407, #ed9596)">
+			<div class="wrap-login100 p-l-110 p-r-110 p-t-20 p-b-30">
+				<form class="login100-form validate-form flex-sb flex-w">
+					<span class="login100-form-title p-b-20">
+						<font style="font-size:2em; line-height:130%; color:black;">Accuracy</font><br>
+						Log In
+					</span>
+					<!--
+					<a href="#" class="btn-face m-b-20">
+						<i class="fa fa-facebook-official"></i>
+						Facebook
+					</a>
+
+					<a href="#" class="btn-google m-b-20">
+						<img src="images/icons/icon-google.png" alt="GOOGLE">
+						Google
+					</a>
+					-->
+					<div class="p-t-20 p-b-9">
+						<span class="txt1">
+							Email
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" id="username_input">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Password
+						</span>
+
+						<a href="#" class="txt2 bo1 m-l-5" onclick="showForgotPass()">
+							Forgot?
+						</a>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="pass" id="password_input">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn m-t-17">
+						<button type="button" class="login100-form-btn" id="sign_in_button">
+							Log In
+						</button>
+					</div>
+
+					<div class="w-full text-center p-t-20">
+						<span class="txt2">
+							Not a member?
+						</span>
+
+						<a href="signup.html" class="txt2 bo1">
+							Create account now
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+
+	<div class="forgotPass" id="fg">
+		<div id="forgotPassSection" class="animated">
+		<button id="closeButton" onclick="hideForgotPass()" style="position: relative; float: right;"><b>X</b></button>
+		<div style="position: relative; top: 50%; transform: translate(0, -50%);">
+			<h1>Account Recovery</h1>
+			<div id="emailareaFG" style="padding-top:5%; font-size: 25px;">
+				<label for="emailFG" style="display: inline-block;padding-right:15px;">Email: </label>
+				<input id="emailFG" type="text" style="padding: 5px; display:inline-block;">
+			</div>
+			<button id="sendEmailB" onclick="resetPass()"
+					style="margin: 25px; padding: 20px; background-color: #d01d33; border-radius:10px;">
+				Send Reset Email</button>
+
+		</div>
+		</div>
+	</div>
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script src="../dashboard/user-data.js"></script>
+	<script src="js/auth.js"></script>
+
+
+
+</body>
+</html>

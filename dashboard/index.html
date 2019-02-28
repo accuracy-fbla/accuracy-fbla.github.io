@@ -1,0 +1,457 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Accuracy Dashboard</title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/png" href="../img/icon.png">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- nalika Icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/nalika-icon.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <link rel="stylesheet" href="inputFields.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/animatecss.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAzfPhj4cAMMPEimZDlGlvK5vgdB52l1co",
+        authDomain: "accuracy-dashboard.firebaseapp.com",
+        databaseURL: "https://accuracy-dashboard.firebaseio.com",
+        projectId: "accuracy-dashboard",
+        storageBucket: "accuracy-dashboard.appspot.com",
+        messagingSenderId: "1053745462291"
+      };
+      firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <iframe id="download_frame" style="display:none;"></iframe>
+
+
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+
+        <div class="header-advance-area">
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="breadcomb-wp">
+											<div class="breadcomb-icon">
+												<i class="icon nalika-home"></i>
+											</div>
+											<div class="breadcomb-ctn">
+												<h2>Dashboard</h2>
+												<p>Welcome to your dashboard</p>
+											</div>
+										</div>
+                                    </div>
+                                    <button id="logoutB" class="btn" onclick="logout()">Log Out</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-sales-area mg-tb-30" style="overflow:hidden">
+            <div class="container-fluid" style="padding: 15px 15px;">
+                <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="product-sales-chart">
+                        <div class="portlet-title">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="caption pro-sl-hd">
+                                        <span class="caption-subject text-uppercase" id="assetsGtext"><b>Assets</b></span>
+                                        <button onclick="toggleDisplay('assetsG', 'g')" id="assetsGg" class="buttonStat buttonActive">Graph</button>
+                                        <button onclick="toggleDisplay('assetsG', 't')" id="assetsGt" class="buttonStat">Table</button>
+
+                                        <div class="actions graph-rp" style="display: inline-block; float:right;">
+                                            <a class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh" onclick="refreshGraphs('assets')">
+                                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="addStat">
+                                    <h1>Add Assets</h1>
+                                    <input type="text" id="asset_input">
+                                    <button id="button_asset">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="assetsGgraph" class="flot-chart flot-chart-sts line-chart-statistic"></div>
+
+                        <div id="assetsGtable" style="display:none;">
+                            <div class="tableStat">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>Assets</th>
+                                        <th>Date added</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="assetsGvalues">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3 class="totalGraph">Total Assets: <span id="assetsTotalGD"></span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="container-fluid" style="padding: 15px 15px;">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-sales-chart">
+                            <div class="portlet-title">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="caption pro-sl-hd">
+                                            <span class="caption-subject text-uppercase" id="expGtext"><b>Expenses</b></span>
+                                            <button onclick="toggleDisplay('expensesG', 'g')" id="expensesGg" class="buttonStat buttonActive">Graph</button>
+                                            <button onclick="toggleDisplay('expensesG', 't')" id="expensesGt" class="buttonStat">Table</button>
+                                            <div class="actions graph-rp" style="display: inline-block; float:right;">
+                                                <a class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh" onclick="refreshGraphs('expenses')">
+                                                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="addStat">
+                                        <h1>Add Expenses</h1>
+                                        <input type="text" id="expense_input">
+                                        <button id="button_expense">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="expensesGgraph" class="flot-chart flot-chart-sts line-chart-statistic"></div>
+
+                            <div id="expensesGtable" style="display:none;">
+                                <div  class="tableStat">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Expenses</th>
+                                            <th>Date added</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="expensesGvalues">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="totalGraph">
+                                    Total Expenses: <span id="expensesTotalGD"></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" style="padding: 15px 15px;">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-sales-chart">
+                            <div class="portlet-title">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="caption pro-sl-hd">
+                                            <span class="caption-subject text-uppercase" id="liabilitiesGtext"><b>Liabilities</b></span>
+                                            <button onclick="toggleDisplay('liabilitiesG', 'g')" id="liabilitiesGg" class="buttonStat buttonActive">Graph</button>
+                                            <button onclick="toggleDisplay('liabilitiesG', 't')" id="liabilitiesGt" class="buttonStat">Table</button>
+                                            <div class="actions graph-rp" style="display: inline-block; float:right;">
+                                                <a class="btn btn-dark btn-circle active tip-top" data-toggle="tooltip" title="Refresh" onclick="refreshGraphs('liabilities')">
+                                                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="addStat">
+                                        <h1>Add Liabilities</h1>
+                                        <input type="text" id="liability_input">
+                                        <button id="button_liability">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="liabilitiesGgraph" class="flot-chart flot-chart-sts line-chart-statistic"></div>
+
+                            <div id="liabilitiesGtable" style="display:none;">
+                                <div  class="tableStat">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Liabilities</th>
+                                            <th>Date added</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="liabilitiesGvalues">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3 class="totalGraph">
+                                    Total Liabilities: <span id="liabilitiesTotalGD"></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-fluid" style="padding: 15px 15px;">
+                <div class="row" style="position:relative;">
+                    <div class="addEmployee" id="addE">
+                        <div id="addEmployeeSection" class="animated">
+                            <button id="closeButton" onclick="hideAddEmployee()" style="z-index:5; position: relative; float: right; background-color:transparent; border:none;"><b>X</b></button>
+                            <div style="position: relative; top: 50%; transform: translate(0, -50%);">
+                                <h1 id="e1">Add Employee</h1>
+                                <div id="namearea" style="padding-top:5%; font-size: 25px;">
+                                    <label for="nameE" style="display: inline-block;padding-right:15px;">Name: </label>
+                                    <input id="nameE" type="text" style="padding: 5px; display:inline-block;">
+                                </div>
+                                <div id="emailarea" style="padding-top:5%; font-size: 25px;">
+                                    <label for="emailE" style="display: inline-block;padding-right:15px;">Email: </label>
+                                    <input id="emailE" type="text" style="padding: 5px; display:inline-block;">
+                                </div>
+                                <div id="phonearea" style="padding-top:5%; font-size: 25px;">
+                                    <label for="phoneE" style="display: inline-block;padding-right:15px;">Phone: </label>
+                                    <input id="phoneE" type="text" style="padding: 5px; display:inline-block;">
+                                </div>
+                                <button id="addEButton" onclick="addEmployee()">
+                                    <strong>Add</strong></button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-xs-12">
+                        <div style="border: 2px solid #eae8e8; border-radius:10px; height: 362px; overflow: auto;">
+                            <div>
+                                <h1 id="employeeHeader" style="margin: 0 auto; padding: 13px 0.75rem; font-size:35px; border-bottom: 1px solid #dce1e4;">
+                                    <span>
+                                        Employees
+                                        <span class="badge" id="numEmployees" style="height:100%; margin-left:10px;">
+
+                                        </span>
+                                    </span>
+                                    <button id="addemployeeB" class="btn" onclick="showAddEmployee()">
+                                        ADD MORE
+                                    </button>
+                                </h1>
+                            </div>
+                            <div id="memberSectionD">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1 col-xs-12">
+                        <div id="downloadS">
+                            <div>
+                                <h1 style="padding: 10px; height:50px; font-size:2.4em;">
+                                    Downloads
+                                </h1>
+
+                            </div>
+                            <div class="downloadSection">
+                                <span>Income Statement</span>
+                                <button data-toggle="tooltip" data-placement="top" title="Download Report" class="btn"
+                                        style="background-color: #152036; color:white;" onclick="download('income-statement')">
+                                    <i class="icon nalika-download"></i>
+                                </button>
+                            </div>
+                            <div class="downloadSection">
+                                <span>Cash Flow Statement</span>
+                                <button data-toggle="tooltip" data-placement="top" title="Download Report" class="btn"
+                                        style="background-color: #152036; color:white;" onclick="download('cash-flow-statement')">
+                                    <i class="icon nalika-download"></i>
+                                </button>
+                            </div>
+                            <div class="downloadSection">
+                                <span>Statement of Changes in Equity</span>
+                                <button data-toggle="tooltip" data-placement="top" title="Download Report" class="btn"
+                                        style="background-color: #152036; color:white;" onclick="download('changes-in-equity')">
+                                    <i class="icon nalika-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" style="padding: 35px 15px;">
+                <h1 style="text-align:center; font-size: 60px;" id="gLedger">General Ledger</h1><br>
+                <div>
+                    <div style="background-color:#d04646; padding: 10px 10px 20px 10px; border-radius: 8px 8px 0 0;">
+                        <h3 style="text-align:center;">Add to Account</h3>
+                        <div class="Wrapper" id="accNW" style="display: inline-block; width: 45%;">
+                            <div class="Input">
+                                <input type="text" id="accName" class="Input-text" placeholder="Account name">
+                                <label for="accName" class="Input-label">Account Name</label>
+                            </div>
+                        </div>
+                        <div class="Wrapper" id="creditW" style="display: inline-block; width: 20%;">
+                            <div class="Input">
+                                <input type="text" id="credit" class="Input-text" placeholder="Credit">
+                                <label for="credit" class="Input-label">Credit</label>
+                            </div>
+                        </div>
+                        <div class="Wrapper" id="debitW" style="display: inline-block; width: 20%;">
+                            <div class="Input">
+                                <input type="text" id="debit" class="Input-text" placeholder="Debit">
+                                <label for="debit" class="Input-label">Debit</label>
+                            </div>
+                        </div>
+                        <button id="addLedgerB" class="btn" >Add</button>
+                    </div>
+                </div>
+                <div id="ledgerDisplay" style="height: 362px; overflow-y: auto; overflow-x: hidden; border-radius: 0 0 8px 8px;">
+
+                </div>
+            </div>
+        </div>
+
+   </div>
+
+
+    <!-- jquery
+		============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- sparkline JS
+		============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="js/calendar/moment.min.js"></script>
+    <script src="js/calendar/fullcalendar.min.js"></script>
+    <script src="js/calendar/fullcalendar-active.js"></script>
+	<!-- float JS
+		============================================ -->
+    <script src="js/flot/jquery.flot.js"></script>
+    <script src="js/flot/jquery.flot.resize.js"></script>
+    <script src="js/flot/curvedLines.js"></script>
+    <script src="js/flot/flot-active.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="js/main.js"></script>
+    <script src="main.js"></script>
+    <script src="user-data.js"></script>
+    <script src="firebase.js"></script>
+
+
+</body>
+
+</html>

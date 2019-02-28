@@ -1,0 +1,169 @@
+.section-gap {
+    padding: 120px 0;
+    @media (max-width: 991px) {
+        padding: 60px 0;
+    }
+}
+
+.section-gap-top {
+    padding-top: 120px;
+    @media (max-width: 991px) {
+        padding-top: 60px;
+    }
+}
+
+.section-title {
+    padding-bottom: 30px;
+    h1 {
+        margin-bottom: 20px;
+        font-size: 48px;
+        line-height: 1.5;
+        letter-spacing: 7.2px;
+        text-transform: uppercase;
+        @media (max-width: 991px) {
+            line-height: 1.2;
+            font-size: 35px;
+            letter-spacing: normal;
+        }
+        @media (max-width: 575px) {
+            font-size: 30px;
+        }
+        @include media-breakpoint-down (md) {
+            br {
+                display: none;
+            }
+        }
+    }
+    p {
+        margin-bottom: 50px;
+        line-height: 30px;
+        @include media-breakpoint-down (md) {
+            br {
+                display: none;
+            }
+        }
+        @media (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.fixed-view-menu,
+.fixed-book-table {
+    position: fixed;
+    top: 52.5%;
+    min-height: 180px;
+    @include transform(translateY(-50%));
+    width: 92px;
+    p {
+        @include transition();
+        a {
+            text-transform: uppercase;
+            font-size: 13px;
+            @include transition();
+        }
+    }
+    @media (max-width: 1114px) {
+        display: none;
+    }
+}
+
+.fixed-view-menu {
+    background: url(../img/view-menu-bg.png) no-repeat center;
+    left: 0;
+    p {
+        @include transform(rotate(90deg) translate(90px, 16px));
+        a {
+            color: #000000;
+            &:hover {
+                color: $primary-color
+            }
+        }
+    }
+    &:hover {
+        p {
+            @include transform(rotate(0deg) translate(8px, 80px));
+        }
+    }
+}
+
+.fixed-book-table {
+    background: url(../img/book-table-bg.png) no-repeat center;
+    right: 0;
+    p {
+        @include transform(rotate(270deg) translate(-82px, 16px));
+        a {
+            color: #ffffff;
+            &:hover {
+                color: #000000
+            }
+        }
+    }
+    &:hover {
+        p {
+            @include transform(rotate(360deg) translate(5px, 80px));
+        }
+    }
+}
+
+.primary-btn {
+    line-height: 48px;
+    padding: 0 30px;
+    border-radius: 0px;
+    background: $primary-color;
+    border: 1px solid $primary-color;
+    color: $white;
+    display: inline-block;
+    font-weight: normal;
+    position: relative;
+    letter-spacing: 2px;
+    @include transition();
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background: transparent;
+        color: $primary-color;
+    }
+    &.dark {
+        background: #000000;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        &:hover {
+            background: transparent;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.go-down {
+    position: relative;
+    margin-top: -52px;
+    z-index: 222222;
+    text-align: center;
+    .go-down-img {
+        cursor: pointer;
+        @include animation(go-up-down 2.5s infinite 0s);
+    }
+}
+
+@include keyframes (go-up-down) {
+    0% {
+        @include transform (translateY(-70px));
+        opacity: 0.1;
+    }
+    100% {
+        @include transform (translateY(0px));
+        opacity: 1;
+    }
+}
