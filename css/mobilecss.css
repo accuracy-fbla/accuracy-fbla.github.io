@@ -1,5 +1,9 @@
 @media only screen and (max-width:420px) {
 
+    #auditingList {
+        font-size: 0.8em !important; 
+    }
+    
     .map {
         width: 100% !important;
         height: auto !important;
@@ -26,7 +30,7 @@
     }
 
     .bottomExtra .col-6  {
-        font-size: 10px !important;
+        font-size: 9px !important;
     }
 
     .bottomExtra .col-6 strong {
@@ -92,10 +96,19 @@
         font-size: 6vw !important;
     }
 
+    .subtitleLonger {
+        font-size: 1.1em;
+    }
+    
     .aboutTitle3 {
         font-size: 3em !important;
         padding-top: 14vh !important;
     }
+    .title4 {
+        font-size: 2em !important;
+        padding-top: 14vh !important;
+    }
+    
     .aboutTitle {
         font-size: 3em !important;
         padding-top: 15vh !important;

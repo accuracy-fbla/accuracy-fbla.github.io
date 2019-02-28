@@ -275,11 +275,22 @@ input:checked + .slider:before {
     padding: 15px;
 }
 
-.aboutTitle1, .aboutTitle2, .aboutTitle3 {
+.subtitleLonger {
+    font-size: 3vw;
+    color: black;
+    font-family: 'Staatliches', sans-serif;
+    padding: 15px;
+}
+
+.aboutTitle1, .aboutTitle2, .aboutTitle3, .title4 {
     font-size: 7vw;
     color: #d01d33;
     font-family: 'Staatliches', cursive;
     padding: 15px;
+}
+
+.title4 {
+    font-size: 5vw;
 }
 
 #logoNav:hover {
