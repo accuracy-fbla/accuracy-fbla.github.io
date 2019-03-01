@@ -40,6 +40,9 @@ A: Make sure your password is over 6 characters and your username has an email p
 Q: Why is the website seem squished or elongated?
 A: Try zooming in or out of your browser. Many times, you have zoomed in or out too much, which causes the website to attempt to resize. 
 
+Q: Why are the images not showing up?
+A: The images are loading into the site. Usually the first time takes the longest. Please be patient.
+
 FUTURE VISIONS
 - - - - - - - - - - - - -
 In the future, we hope to take advantage of the information on our dashboard to add machine-learning based 
