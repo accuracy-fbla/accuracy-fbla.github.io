@@ -47,7 +47,7 @@ algorithms to predict future company performance.
 
 INSTALLATION
 - - - - - - - - - - - -
-Please visit the website link: accuracy-fbla.github.io
+Please visit the website link: https://accuracy-fbla.github.io
 OR 
 Download the zip file from a the github link and double click the index.html file. 
 Link to github repository: https://github.com/accuracy-fbla/accuracy-fbla.github.io
