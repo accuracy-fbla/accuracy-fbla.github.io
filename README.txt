@@ -47,12 +47,14 @@ algorithms to predict future company performance.
 
 INSTALLATION
 - - - - - - - - - - - -
-Please visit the website link: 
-OR Download the zip file from a the github link and double click the index.html file
+Please visit the website link: accuracy-fbla.github.io
+OR 
+Download the zip file from a the github link and double click the index.html file. 
+Link to github repository: https://github.com/accuracy-fbla/accuracy-fbla.github.io
 
 SOFTWARE USED
 - - - - - - - - - - - - - -
-The website was written in pure HTML/CSS/Javascript.
+The website was written in pure HTML/CSS/Javascript with the addition of external Javascript libraries and external CSS links.
 
 TEMPLATES USED
 - - - - - - - - - - - - - - -
