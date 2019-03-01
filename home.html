@@ -62,6 +62,9 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 						<div class="collapse navbar-collapse menu-right" id="collapsibleNavbar">
 							<ul class="navbar-nav justify-content-center w-100">
 								<li class="nav-item hide-lg">
+									<a class="nav-link" href="home.html">Home</a>
+								</li>
+								<li class="nav-item hide-lg">
 									<a class="nav-link" href="about.html">About</a>
 								</li>
 								<li class="nav-item hide-lg">
@@ -201,10 +204,10 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 			</div>
 
 			<div id="contactUSForm" style=" padding: 20px 8vw; width: 50%; float: left; height: 100%;">
-				<form id="gform" >
+				<div id="gform">
 					<div class="field">
 						<label for="name">Name</label>
-						<input id="name" type="text" name="name" placeholder="Joe Smith"/>
+						<input id="name" type="text" name="name" placeholder="John Doe"/>
 					</div>
 					<div class="field">
 						<label for="email">Email</label>
@@ -212,16 +215,16 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 					</div>
 					<div class="field">
 						<label for="message">Message</label>
-						<textarea name="message" id="message" rows="7" placeholder="Tell me what is on your mind"></textarea>
+						<textarea name="message" id="message" rows="7" placeholder="My message"></textarea>
 					</div>
 					<br>
-					<button id="buttonForm" class="sendEmailButton"
+					<button id="buttonForm" class="sendEmailButton" onclick="sendEmail()"
 					 style="background-color: transparent; border-radius: 8px; color: white;
 					border: solid 2px rgba(255, 255, 255, 0.3);">
 							<i class="fa fa-paper-plane"></i>&nbsp;Send</button>
 
 					<br><br><br>
-				</form>
+				</div>
 			</div>
 
 
@@ -274,12 +277,12 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 						</span>
 					</div>
 					<div class="col-6 col-md-6">
-						<span style="font-size: 20px; line-height:0.9"><strong>Alternate Accounting Sites</strong></span><br>
+						<span style="font-size: 20px; line-height:0.9"><strong>Our Partnering Firms</strong></span><br>
 						<span>
 							<a href="https://www.mozzetti.com/" target="_blank">Mozzetti, Inc.</a>
 						</span><br>
 						<span>
-							<a href="http://bhuiyancpa.com/" target="_blank">Bhuiyan</a>
+							<a href="http://bhuiyancpa.com/" target="_blank">Bhuiyan CPA</a>
 						</span><br>
 						<span>
 							<a href="http://www.bandraccounting.com/" target="_blank">B&R Accounting</a>
@@ -307,5 +310,12 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 	<script src="js/jquery.sticky.js"></script>
 	<script src="js/parallax.min.js"></script>
 	<script src="js/main.js"></script>
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init("user_S2WW9tssciy3huUeog4M7");
+		})();
+	</script>
+	<script src="js/contact-email.js"></script>
 </body>
 </html>

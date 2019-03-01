@@ -59,6 +59,9 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
                     <div class="collapse navbar-collapse menu-right" id="collapsibleNavbar">
                         <ul class="navbar-nav justify-content-center w-100">
                             <li class="nav-item hide-lg">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item hide-lg">
                                 <a class="nav-link" href="about.html">About</a>
                             </li>
                             <li class="nav-item hide-lg">
@@ -79,8 +82,16 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
                                 </div>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="home.html">Home</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    Misc
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="opportunities.html">Opportunities</a>
+                                    <a class="dropdown-item" href="faq.html">FAQs</a>
+                                    <a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a>
+                                    <a class="dropdown-item" href="Login-Signup/index.html" target="_blank">►Dashboard◄</a>
+                                </div>
                             </li>
 
 
@@ -178,14 +189,14 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
                 filed after the April deadline, Accuracy guarantees to pay the 5% late fee.
             </p>
         </div>
-        
+
         <button class="accordion">
             How can I delete values on the dashboard?
         </button>
         <div class="panel">
             <p>Due to the need to preserve financial integrity and security, we do not allow these expenses and liabilities <tbody>
               be removed on the user end. However, if for some reason you have made a mistake in data-entry, please contact an Accuracy representative
-              using the contact form at the bottom of the site and we will fix the issue within 48 hours. 
+              using the contact form at the bottom of the site and we will fix the issue within 48 hours.
             </p>
         </div>
     </div>
@@ -206,10 +217,10 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
         </div>
 
         <div id="contactUSForm" style=" padding: 20px 8vw; width: 50%; float: left; height: 100%;">
-            <form id="gform" >
+            <div id="gform">
                 <div class="field">
                     <label for="name">Name</label>
-                    <input id="name" type="text" name="name" placeholder="Joe Smith"/>
+                    <input id="name" type="text" name="name" placeholder="John Doe"/>
                 </div>
                 <div class="field">
                     <label for="email">Email</label>
@@ -217,17 +228,18 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
                 </div>
                 <div class="field">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="7" placeholder="Tell me what is on your mind"></textarea>
+                    <textarea name="message" id="message" rows="7" placeholder="My message"></textarea>
                 </div>
                 <br>
-                <button id="buttonForm"
+                <button id="buttonForm" class="sendEmailButton" onclick="sendEmail()"
                         style="background-color: transparent; border-radius: 8px; color: white;
 					border: solid 2px rgba(255, 255, 255, 0.3);">
                     <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
 
                 <br><br><br>
-            </form>
+            </div>
         </div>
+
     </div>
 </section>
 
@@ -245,7 +257,7 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = null;
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
+    }
   });
 }
 </script>
@@ -261,5 +273,12 @@ for (i = 0; i < acc.length; i++) {
 <script src="js/jquery.sticky.js"></script>
 <script src="js/parallax.min.js"></script>
 <script src="js/main.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("user_S2WW9tssciy3huUeog4M7");
+    })();
+</script>
+<script src="js/contact-email.js"></script>
 </body>
 </html>

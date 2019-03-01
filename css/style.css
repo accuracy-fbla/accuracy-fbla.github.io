@@ -79,6 +79,11 @@ input:checked + .slider:before {
     border: solid 2px white !important;
 }
 
+.sendEmailButton:focus {
+    border: solid 2px white !important;
+}
+
+
 .ppolicy:hover {
     font-weight:600;
     color: white !important;
