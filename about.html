@@ -28,6 +28,12 @@ Cool stuff that we could add
 animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 
 -->
+
+<!-- If you want to play music
+<audio autoplay id="music">
+	<source src="img/fbla%20music.mp3">
+</audio>
+-->
 <header class="header-area">
 	<div class="container">
 		<div class="header-wrap">
@@ -107,8 +113,8 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 </header>
 
 
-	<section style="background-color: white; padding: 5vw;">
-		<div class="container" style="text-align: center;">
+	<section style="background-color: white; padding: 3vw 2vw;">
+		<div class="container-fluid" style="text-align: center;">
 			<h1 class="aboutTitle">Our History</h1>
 			<p class="aboutInfo" style="text-align: left;">
 				Accuracy Inc. is steadfast on its journey to revolutionize financial accounting with its innovative approaches to ensuring customers receive the best possible experience. Our story began last year in 2018, when our founder and CEO, Dianna Whitter, noticed that although there were plenty of accounting firms based in the US, their time was spent solely catering to top tier enterprises and corporations, leaving out the millions of small businesses and individuals that struggle to manage their finances every year.
@@ -124,8 +130,11 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 	</section>
 
 	<section style="padding: 5vw;">
-		<div class="container" style="text-align: center;">
-			<h1 class="aboutTitle" style="color:white">Our Staff</h1>
+		<div class="container" style="text-align: center; position: relative;">
+			<video autoplay muted loop id="video">
+				<source src="img/company-tour.mp4" type="video/mp4">
+			</video>
+			<h1 id="staffTitle" class="aboutTitle" style="color:white">Our Staff</h1>
 			<p class="aboutInfo" style="text-align: left; color:white">
 				Accuracy aims at making the best hiring decisions possible.
 				Our core philosophy to provide excellent accounting services
@@ -259,7 +268,7 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 	</section>
 
 	<section style="padding: 5vw; background-color: white">
-		<div class="container" style="text-align: center; padding-bottom: 2vw;">
+		<div class="container-fluid" style="text-align: center; padding-bottom: 2vw;">
 			<h1 class="aboutTitle2">How We Give Back</h1>
 			<p class="aboutInfo" style="text-align: left;">
 				Accuracy is also proud to partner with KPMG to provide free-of-use accounting systems to local businesses in underdeveloped neighborhoods in metropolitan areas across the country, including Brooklyn, NYC, Detroit, MI, Oakland, CA, and more. By providing online financial support, Accuracy aims to help get these businesses on their feet and help them develop a steady stream of income by focusing on their operations, letting us handle their financial statements and consolidating their ledgers and numerous accounts into one simple portal.
@@ -397,10 +406,16 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 
     <section style="padding: 5vw; background-color: white;">
         <div class="container" style="text-align: center">
-            <h1 class="aboutTitle2">Our Locations</h1>
-            <img class="img-fluid map" src="img/map.png" style="width: 80%; height: auto;">
+            <h1 class="aboutTitle2">Our Location</h1>
+			<div class="mapouter">
+				<div class="gmap_canvas">
+					<iframe id="gmap_canvas" src="https://maps.google.com/maps?q=cupertino%20high%20&t=&z=5&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+					</iframe>
+				</div>
+			</div>
         </div>
     </section>
+
 
 
 <div class="bottomPage" style="height:575px;">
@@ -475,7 +490,9 @@ animation on scroll: https://codepen.io/simoncodrington/pen/Mwgqqd
 
 
 
-
+	<script>
+		document.getElementById("music").volume = "0.05";
+	</script>
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="js/slide-animation.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"

@@ -1,5 +1,14 @@
 @media only screen and (max-width:420px) {
 
+    .mapouter {
+        height: 300px;
+    }
+
+    #staffTitle {
+        line-height: 200px;
+        padding-top: 5px !important;
+    }
+
     #auditingList {
         font-size: 0.8em !important; 
     }
