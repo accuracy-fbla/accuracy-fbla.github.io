@@ -218,12 +218,6 @@ input:checked + .slider:before {
     margin-top: 1rem;
 }
 
-
-
-
-
-
-
 .pricingHeaders {
     font-size: 3vw;
     color: #d01d33;
@@ -287,14 +281,14 @@ input:checked + .slider:before {
 }
 
 .scheduleTitle {
-    font-size: 7em;
+    font-size: 4em;
     color: #d01d33;
     font-family: 'Staatliches', cursive;
     padding: 15px;
 }
 
 .aboutTitle {
-     font-size: 6em;
+     font-size: 4em;
      color: #d01d33;
      font-family: 'Staatliches', sans-serif;
      padding: 15px;
@@ -315,7 +309,7 @@ input:checked + .slider:before {
 }
 
 .aboutTitle1, .aboutTitle2, .aboutTitle3, .title4 {
-    font-size: 5vw;
+    font-size: 4em;
     color: #d01d33;
     font-family: 'Staatliches', cursive;
     padding: 15px;
@@ -340,7 +334,15 @@ input:checked + .slider:before {
 }
 
 .aboutInfo {
-    font-size: 1.1em;
+    font-size: 1.5em;
+}
+
+div p {
+  font-size: 1.5em;
+}
+
+li {
+  font-size: 1.5em;
 }
 
 
