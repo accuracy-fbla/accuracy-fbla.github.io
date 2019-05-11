@@ -1,5 +1,27 @@
 @media only screen and (max-width:420px) {
 
+      #home-email {
+        padding-top: 0 !important;
+      }
+
+      #logoNav {
+        width: 35px;
+        height: 35px;
+      }
+
+      .logo {
+        height: 70%;
+      }
+
+      .logo > a {
+        height: 100% !important;
+        width: 100% !important;
+      }
+
+    .social-media {
+      margin: 0 auto 30px auto;
+    }
+
     .mapouter {
         height: 300px;
     }
@@ -10,9 +32,9 @@
     }
 
     #auditingList {
-        font-size: 0.8em !important; 
+        font-size: 0.8em !important;
     }
-    
+
     .map {
         width: 100% !important;
         height: auto !important;
@@ -108,7 +130,7 @@
     .subtitleLonger {
         font-size: 1.1em;
     }
-    
+
     .aboutTitle3 {
         font-size: 3em !important;
         padding-top: 14vh !important;
@@ -117,7 +139,7 @@
         font-size: 2em !important;
         padding-top: 14vh !important;
     }
-    
+
     .aboutTitle {
         font-size: 3em !important;
         padding-top: 15vh !important;
