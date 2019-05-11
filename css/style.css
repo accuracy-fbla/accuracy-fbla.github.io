@@ -157,6 +157,10 @@ input:checked + .slider:before {
     color:white !important;
 }
 
+.iconBottom:hover {
+  transform: scale(1.5);
+}
+
 #portalB {
     width: 250px;
     height: 75px;
@@ -173,6 +177,15 @@ input:checked + .slider:before {
 
 #portalB:focus {
     outline:none;
+}
+
+
+.social-media {
+
+}
+
+.social-media:hover {
+  transform: scale(1.5);
 }
 
 
@@ -217,12 +230,6 @@ input:checked + .slider:before {
 .panel p {
     margin-top: 1rem;
 }
-
-
-
-
-
-
 
 .pricingHeaders {
     font-size: 3vw;
@@ -287,14 +294,14 @@ input:checked + .slider:before {
 }
 
 .scheduleTitle {
-    font-size: 7em;
+    font-size: 4em;
     color: #d01d33;
     font-family: 'Staatliches', cursive;
     padding: 15px;
 }
 
 .aboutTitle {
-     font-size: 6em;
+     font-size: 4em;
      color: #d01d33;
      font-family: 'Staatliches', sans-serif;
      padding: 15px;
@@ -315,7 +322,7 @@ input:checked + .slider:before {
 }
 
 .aboutTitle1, .aboutTitle2, .aboutTitle3, .title4 {
-    font-size: 5vw;
+    font-size: 4em;
     color: #d01d33;
     font-family: 'Staatliches', cursive;
     padding: 15px;
@@ -342,6 +349,7 @@ input:checked + .slider:before {
 .aboutInfo {
     font-size: 1.1em;
 }
+
 
 
 .staffCard {
