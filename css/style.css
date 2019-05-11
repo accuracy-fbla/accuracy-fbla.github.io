@@ -157,6 +157,10 @@ input:checked + .slider:before {
     color:white !important;
 }
 
+.iconBottom:hover {
+  transform: scale(1.5);
+}
+
 #portalB {
     width: 250px;
     height: 75px;
@@ -173,6 +177,15 @@ input:checked + .slider:before {
 
 #portalB:focus {
     outline:none;
+}
+
+
+.social-media {
+
+}
+
+.social-media:hover {
+  transform: scale(1.5);
 }
 
 
